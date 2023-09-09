@@ -4,6 +4,8 @@
   --white: #ffffff;
   --grey: #e2e8f0;
   --blue: #1992d4;
+  --yellow: #FACC15;
+  --box-shadow:  rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 /* ----------------------------------------------- */
 
@@ -17,10 +19,15 @@ p{
    margin: 0;
 }
 
+hr{
+    width: 100%;
+    color: var(--grey);
+    
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 5fr;
 }
 /* -------------------------------------------- */
 
@@ -68,7 +75,6 @@ input[type="search"] {
   width: 80%;
   height: 30px;
   border-radius: 20px;
-  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px; */
 }
 
 input[type="search"]:focus {
@@ -120,6 +126,12 @@ input[type="search"]:focus {
   grid-column: 1 / 2;
   color: white;
   padding: 10px 0 0 20px;
+  z-index: -1;
+  
+}
+
+.sidebar-wrapper{
+    position: fixed;
 }
 
 .sidebar-item{
@@ -149,8 +161,86 @@ input[type="search"]:focus {
 /* --------------------------------------------- */
 
 .main {
-  background-color: lightgreen;
+  background-color: var(--grey);
   grid-row: 2 / 3;
   grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* grid-template-rows: 1fr 1fr; */
+  gap: 10px;
+  padding: 20px 20px 20px 10px;
 }
-/* --------------------------------------------- */
+
+.heading{
+    margin-bottom: 10px;
+}
+/* -------------------- */
+
+.projects-section{
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.project-card{
+    height: 203.5px;
+    background-color: white;
+    border-left: 10px solid ;
+    border-radius: 10px;
+    border-color: var(--yellow);
+    padding: 20px;
+    position: relative;
+    box-shadow: var(--box-shadow)
+    
+}
+
+.card-tools{
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.card-tools svg{
+    width: 20px;
+}
+/* -------------------------- */
+
+.announcement-section{
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.announcements, .trending{
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.announcement-heading{
+    font-weight: bold;
+}
+
+.trending-section{
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    margin-top: 50px;
+}
+
+.user-profile{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    
+}
+
