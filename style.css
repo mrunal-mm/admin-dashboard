@@ -4,6 +4,7 @@
   --white: #ffffff;
   --grey: #e2e8f0;
   --blue: #1992d4;
+  --dark-blue: #1783bf;
   --yellow: #FACC15;
   --box-shadow:  rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
@@ -21,18 +22,23 @@ p{
 
 hr{
     width: 100%;
-    color: var(--grey);
-    
+    color: var(--grey);  
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr 4fr;
+} 
+
+svg:hover, button:hover{
+    fill: var(--yellow);
+    cursor: pointer;
 }
+
+
 /* -------------------------------------------- */
 
 .navbar {
-  background-color: lightblue;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   padding: 10px 50px 10px 20px;
@@ -47,6 +53,10 @@ hr{
 .avatar-small {
   width: 30px;
   height: 30px;
+}
+
+.avatar-small:hover{
+  cursor: pointer;
 }
 
 .avatar-large {
@@ -118,6 +128,10 @@ input[type="search"]:focus {
   height: 25px;
   border-radius: 20px;
 }
+
+.nav-button:hover{
+  background-color: var(--dark-blue);
+}
 /* -------------------------------------------- */
 
 .sidebar {
@@ -126,12 +140,6 @@ input[type="search"]:focus {
   grid-column: 1 / 2;
   color: white;
   padding: 10px 0 0 20px;
-  z-index: -1;
-  
-}
-
-.sidebar-wrapper{
-    position: fixed;
 }
 
 .sidebar-item{
@@ -139,6 +147,12 @@ input[type="search"]:focus {
     gap: 15px;
     align-items: center;
     margin-bottom: 15px;
+}
+
+.sidebar-item:hover svg, .sidebar-item:hover, .sidebar-item:hover #dashboard{
+    fill: var(--yellow);
+    color: var(--yellow);
+    cursor: pointer;
 }
 
 .sidebar-logo{
@@ -195,9 +209,18 @@ input[type="search"]:focus {
     border-color: var(--yellow);
     padding: 20px;
     position: relative;
-    box-shadow: var(--box-shadow)
-    
+    box-shadow: var(--box-shadow);
+    transition: all 0.2s ease-in-out;
 }
+
+.project-card:hover{
+  transform: scale(1.02)
+}
+
+.card-heading:hover{
+  cursor: pointer;
+}
+
 
 .card-tools{
     display: flex;
@@ -231,6 +254,10 @@ input[type="search"]:focus {
     font-weight: bold;
 }
 
+.announcement-heading:hover{
+  cursor: pointer;
+}
+
 .trending-section{
     grid-row: 2 / 3;
     grid-column: 2 / 3;
@@ -241,6 +268,9 @@ input[type="search"]:focus {
     display: flex;
     gap: 15px;
     align-items: center;
-    
 }
 
+.user-profile img:hover, .user-id:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
