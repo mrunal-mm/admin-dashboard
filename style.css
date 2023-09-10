@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 :root {
   --white: #ffffff;
   --grey: #e2e8f0;
+  --grey2: #333333;
   --blue: #1992d4;
   --dark-blue: #1783bf;
   --yellow: #FACC15;
@@ -43,6 +44,7 @@ svg:hover, button:hover{
   grid-row: 1 / 2;
   padding: 10px 50px 10px 20px;
   background-color: var(--white);
+  font-weight: 500;  
 }
 
 .navbar svg {
@@ -97,7 +99,7 @@ input[type="search"]:focus {
 
 .uppernav .right-part {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
 }
 
@@ -119,7 +121,7 @@ input[type="search"]:focus {
 .lowernav .right-part {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 .nav-button {
@@ -130,10 +132,20 @@ input[type="search"]:focus {
   width: 78px;
   height: 35px;
   border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 
 .nav-button:hover{
   background-color: var(--dark-blue);
+}
+
+.user-profile-lowernav p:first-child{
+  font-size: 0.8rem;
+}
+
+.user-profile-lowernav p:nth-child(2){
+  font-size: 1.1rem;
 }
 /* -------------------------------------------- */
 
@@ -150,6 +162,7 @@ input[type="search"]:focus {
     gap: 15px;
     align-items: center;
     margin-bottom: 15px;
+    font-weight: 500;
 }
 
 .sidebar-item:hover svg, .sidebar-item:hover, .sidebar-item:hover #dashboard{
@@ -161,6 +174,8 @@ input[type="search"]:focus {
 .sidebar-logo{
     margin-bottom: 50px;
     margin-right: 5px;
+    font-size: 1.3rem;
+    font-weight: 900;
 }
 
 #dashboard{
@@ -191,6 +206,8 @@ input[type="search"]:focus {
 
 .heading{
     margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
 }
 /* -------------------- */
 
@@ -207,6 +224,7 @@ input[type="search"]:focus {
 
 .project-card{
     height: 203.5px;
+    height: 180px;
     background-color: white;
     border-left: 10px solid ;
     border-radius: 10px;
@@ -221,10 +239,18 @@ input[type="search"]:focus {
   transform: scale(1.02)
 }
 
+.card-heading{
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
 .card-heading:hover{
   cursor: pointer;
 }
 
+.project-card p:nth-child(2){
+  color: var(--grey2)
+}
 
 .card-tools{
     display: flex;
@@ -255,17 +281,24 @@ input[type="search"]:focus {
 }
 
 .announcement-heading{
-    font-weight: bold;
+    font-weight: 500;
+    margin-bottom: 2px;
 }
 
 .announcement-heading:hover{
   cursor: pointer;
 }
 
+.announcement-heading + p{
+  font-size: 0.9rem;
+  color: var(--grey2);
+}
+
+/* ---------------------- */
 .trending-section{
     grid-row: 2 / 3;
     grid-column: 2 / 3;
-    margin-top: 50px;
+    margin-top: 12.5px;
 }
 
 .user-profile{
@@ -277,4 +310,13 @@ input[type="search"]:focus {
 .user-profile img:hover, .user-id:hover{
   cursor: pointer;
   text-decoration: underline;
+}
+
+.user-id{
+  font-weight: 500;
+}
+
+.user-name{
+  font-size: 0.8rem;
+  color: var(--grey2);
 }
