@@ -68,11 +68,13 @@ svg:hover, button:hover{
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 10px;
+  justify-content: space-between;
 }
 
 .uppernav .left-part {
   display: flex;
-  margin-right: auto;
   gap: 10px;
   flex-grow: 2;
   flex-basis: 300px;
@@ -103,14 +105,15 @@ input[type="search"]:focus {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
 }
 
 .lowernav .left-part {
   display: flex;
   gap: 10px;
   align-items: center;
-  margin-right: auto;
-  flex-basis: 200px;
+  flex-basis: 222px;
 }
 
 .lowernav .right-part {
@@ -124,8 +127,8 @@ input[type="search"]:focus {
   background-color: var(--blue);
   color: white;
   /* box-sizing: border-box; */
-  width: 60px;
-  height: 25px;
+  width: 78px;
+  height: 35px;
   border-radius: 20px;
 }
 
@@ -157,6 +160,7 @@ input[type="search"]:focus {
 
 .sidebar-logo{
     margin-bottom: 50px;
+    margin-right: 5px;
 }
 
 #dashboard{
